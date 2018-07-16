@@ -1,0 +1,267 @@
+# hexo-theme-mellow-west
+# https://github.com/yscoder/hexo-theme-indigo
+# In order to avoid unknown parsing errors, the tightening in the configuration is 2 half-width spaces, followed by a colon with 1 half-width space.
+# Unwanted configuration can be commented out, or the corresponding key Boolean value can be modified.(enable和disable)
+
+
+##################################
+####   Global configuration    ###
+##################################
+
+# Whether to enable less compression
+## Compression is recommended, and don't modify the default paths
+less:
+  compress: true #Whether to compress
+  paths:
+    - source/css/style.less #Compressed file path
+
+# Site icon
+favicon: /img/favicon.ico
+
+# Head background
+# Such as /img/avatar.jpg or https://i.loli.net/2017/12/12/5a2fd18a74471.jpg
+headerBg: /img/banner.jpg
+
+# Dynamic definition of title
+#title_change:
+  #normal: (つェ⊂)咦!又好了!     #页面获得焦点时显示(短暂存在) TTT (つェ⊂)咦! Good again! #Page is displayed when the focus is obtained (transient existence)
+  #leave: 死鬼去哪里了！         #页面失去焦点后显示 TTT Where did the devil go? #Page shows after losing focus
+
+# Canonical URL
+## Let search engines redirect your different domain names, different subdomains, and sites in different domains to the path you expect.
+## https://support.google.com/webmasters/answer/139066
+  ## Assume that the configuration is canonical: http://www.lujingtao.com，Then from the search engine www.lujingtao.com Entry will redirect to lujingtao.com
+canonical: false
+
+# DaoVoice chatroom
+#daovoice:
+#  app_id:
+
+##############################################################################################################################
+
+################################
+####   Menu configuration    ###
+################################
+
+# Avatar
+avatar: /img/tux-avatar.jpg
+
+# The link address after the avatar clicks
+avatar_link: / #Default is home page
+
+# Avatar area background image
+brand: /img/brand.jpg
+
+# e-mail address abc@def.com
+email:
+
+hide_menu_title: hide
+
+# Link icon below the email
+## New connection rule [name]: url | icon
+## Use the fontawesome icon，Just write the icon name。github -> icon-github | fa-github
+## http://http://fontawesome.dashgame.com/
+#menu_link:
+#  github: https://github.com/kwa | github
+
+# Add a new menu item to follow the rules below
+## menu:
+##  link:               [Required] [Do not render] Used to distinguish categories
+##    icon: _blank      [Required] [Render] menu icon. Use the built-in fontawesome icon to omit the prefix
+##    text: About       [Required] [Render] menu text information
+##    url: /about       [Required] [Render] menu link, absolute or relative path.
+##    target: _blank    [Required] [Do not render] Whether to jump out, if omitted, open on the current page
+menu:
+  home:
+    text: HOME
+    url: /
+    icon: home
+  th-list:
+    text: CATEGORIES
+    url: /categories
+    icon: th-list
+  tags:
+    text: TAGS
+    url: /tags
+    icon: tags
+  archives:
+    text: ARCHIVES
+    url: /archives
+    icon: archives
+  #about:
+    #text: ABOUT
+    #url: /about
+    #icon: user
+  #demo:
+    #text: CUSTOM
+    #url: /custom
+    #icon: plus-square
+  #github:
+    #url: https://github.com/codefine
+    #target: _blank
+    #icon: github
+  #weibo:
+    #url: http://www.weibo.com/codefine
+    #target: _blank
+
+##############################################################################################################################
+
+################################
+####   Home configuration    ###
+################################
+
+# Does the homepage open the top sign?
+top_icon: true
+
+# Whether the article thumbnail in the home page uses a relative path
+## Only when disable is true, the following path url will take effect, the path address is located.: Global/source/uploads
+## Uploads can be any existing folder name (can not exist on its own), used to place a variety of static files that need to be introduced to the page, such as img.
+## Reference https://hexo.io/zh-cn/docs/asset-folders.html#Article resource folder
+
+
+##############################################################################################################################
+
+###################################
+####   Article configuration    ###
+###################################
+
+# page title
+## Tab page / category page / Archive page title can only be set here
+## Other custom page titles are set in the title of the page markdown file.
+tags_title: Tags              #Bookmark page
+categories_title: Categories  #Category page
+archives_title: Archives      #Archive page
+
+# Home article summary thumbnail
+defaultthumb: true
+
+# Automatically generate article abstracts
+## Displayed in the home page
+## excerpt_length only takes effect when excerpt_render is true.
+## excerpt_render can be manually truncated when it is false. The method is to add <!--more--> to the markdown file of the article, and the previous content is regarded as the summary part.
+excerpt_render: false   # Automatic truncation
+excerpt_length: 200     # Cut length
+excerpt_link: READ      # More button content
+
+# Whether to display the last update time of the article
+## Copyright at the bottom of the article
+show_last_updated: true
+
+# Copyright information copyright
+## At the bottom of the article
+## hexo all variables and auxiliary functions can be called, please refer to hexo.io
+postMessage: Reprinted to indicate the source, original address：<a href="<%- url_for(page.path).replace(/index\.html$/, "") %>" target="_blank" rel="external"><%- page.permalink.replace(/index\.html$/, "") %></a>
+
+# Reward
+## You can set reward: false in the article markdown to cancel the reward function of this article.
+## Global Cancel Direct Comments Below Configuration
+reward:
+  title: Let's make this world a little more interesting.
+  wechat: false # /img/reward-wechat.jpg     #WeChat
+  alipay: false # /img/reward-alipay.jpg     #Alipay
+
+# share it
+## Built-in 6 ways to share, the settings that are not needed correspond to false
+## You can set the share: false in the article markdown to cancel the reward function of this article.
+## Global Cancel Direct Comments Below Configuration
+share_items:
+  weibo: false
+  wechat: false
+  qq: false
+  facebook:
+    title: Share to Facebook
+  twitter:
+    title: Share to Twitter
+  google:
+    title: Share to Google+
+
+# table of Contents
+## Capture article markdown #Level title / ##Secondary title / ### Three-level title, etc.
+## is located on the right side of the article, automatically hidden on the mobile or small screen
+toc:
+  enable: true
+  list_number: true  # Whether to display numerical ordering
+
+##############################################################################################################################
+
+##################################
+####   Footer configuration    ###
+##################################
+
+# Links
+blogroll:
+  item1:
+    name: HOME
+    url: https://www.lujingtao.com
+  #item2:
+    #name: gitee
+    #url: https://www.gitee.com
+  #item3:
+    #name: coding
+    #url: https://www.coding.net
+
+# Copyright year
+since_year: 2018
+
+# iIcp record number
+##example ICP_license: Beijing ICP No. 123456
+ICP_license: false
+
+# Drive engine/topic and other information
+power: true
+
+# Equipped with server information
+## If you use the pages function like github or gitee, you can set it to false.
+## If you use the pages of coding.net as the host, this option will help you understand the default ad page.
+## See https://coding.net/help/doc/pages/guide-page.html for details.
+hosted: false
+
+##############################################################################################################################
+
+######################################
+####   Third party configuration   ###
+######################################
+
+# search for
+local_search: true
+
+# Baidu statistics
+baidu_tongji: #appid
+
+# gitment comment system
+## https://github.com/imsun/gitment
+gitment:
+  enable: false
+  lazy: true # Whether to enable initialization hidden comments
+  owner: codefine # Github account
+  repo: gitment # Message warehouse
+  oauth:
+    client_id: # client_id
+    client_secret: # client_id
+  perPage: 10 # Pagination
+
+# Valine comment system
+## https://valine.js.org/
+valine:
+  enable: false
+  appid: #appid
+  appkey: #appkey
+  notify: true  #Whether to open the email reminder
+  verify: true  #Whether to open the verification code
+  placeholder: give me some sugers plz... #Reservation information in the message board
+  avatar: 'wavatar'  #profile picture
+
+# Article browsing statistics
+leancloud_visitors:
+  enable: false
+  app_id: # appid
+  app_key: # appkey
+  icon: true # True only displays icons, false only displays text
+
+# Mathematical formula
+mathjax:
+  enable: true
+  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
+
+# Whether to use the button waves plugin
+waves: true
