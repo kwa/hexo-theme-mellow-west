@@ -147,6 +147,10 @@ archives_title: Archives      #Archive page
 # Home article summary thumbnail
 defaultthumb: true
 
+# Paginator translation https://hexo.io/docs/helpers.html#paginator
+paginator_prev: Prev
+paginator_next: Next
+
 # Automatically generate article abstracts
 ## Displayed in the home page
 ## excerpt_length only takes effect when excerpt_render is true.
