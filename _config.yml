@@ -277,7 +277,7 @@ leancloud_visitors:
 # Mathematical formula
 mathjax:
   enable: true
-  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
+  cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 # Whether to use the button waves plugin
 waves: true
